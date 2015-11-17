@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+  background: #69A882 url("http://s23.postimg.org/ngpq8ll8p/Smaller_desk_worker.png") no-repeat center top;
+  background-size: 100%;
+}
+
+h1,p {
+  color:#FFFFFF;
+  font-family: Raleway, Helvetica;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+#slogan {
+  font-size: 48px;
+  font-weight: bold;
+  font-family: Calibri, "Trebuchet MS";
+}
