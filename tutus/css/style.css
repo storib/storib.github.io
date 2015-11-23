@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+body {
+  background: #FCE6F0;
+}
+
+h1 {
+  text-align: Center;
+  font-family: Lora, serif;
+}
+.navbar ul {
+  list-style: none;
+  background-color: #FF9EBA;
+  text-align: right;
+  padding: 0;
+  margin: -10px 0;
+}
+
+.navbar li {
+  font-family: "Raleway", serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height:40px;
+  padding: 0 5px;
+  text-align: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transiiton: .3s background-color;
+}
+.navbar a:hover {
+  background-color: #FFDBE5;
+}
+
+.navbar a.active {
+  background-color: #FFDBE5;
+  color: #444;
+  cursor: default;
+}
+
+@media screen and (min-width: 600px) {
+  .navbar li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size:  1.4em;
+  }
+  .navbar li {
+    display: inline-block;
+    margin-right: 5px;
+  }
+}
+
+/*-----------------*\
+  $carousel
+/*-----------------*/
+.carousel {
+  overflow: hidden;
+  width:100%;
+  margin: 0 auto;
+}
+.panes {
+  list-style: none;
+  position:relative;
+  width:500%;
+  overflow: hidden;
+
+  -moz-animation: carousel 60s infinite;
+  -webkit-animation: carousel 60s infinite;
+  animation: carousel 60s infinite;
+}
+
+.panes > li{
+  position:relative;
+  float:left;
+  width: 20%; /* 100 / number of pains */
+}
+
+.carousel img {
+  display: block;
+  width: 50%;
+  max-width: 100%;
+  margin: auto;
+
+}
+
+.carousel h2{
+  font-size: 1em;
+  padding: 0.5em;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  text-align:right;
+  color: #fff;
+  backgroun-color: rgba(0,0,0,.75);
+}
+
+@keyframes carousel{
+  0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-200%; }
+    36%   { left:-200%; }
+    37.5% { left:-300%; }
+    48.5% { left:-300%; }
+    50%   { left:-400%; }
+    61%   { left:-400%; }
+    62.5% { left:-300%; }
+    73.5% { left:-300%; }
+    75%   { left:-200%; }
+    86%   { left:-200%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+}
