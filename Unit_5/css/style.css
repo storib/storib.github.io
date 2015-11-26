@@ -6,10 +6,21 @@ header {
   padding: 20px;
 }
 
+header img {
+  width:50%;
+  height: 50%;
+  margin: 0 auto;
+}
 nav {
   background-color: #E8C66A;
   border: 1px black solid;
   padding: 20px;
+}
+
+nav li {
+  list-style: none;
+  text-align: right;
+  display: inline-block;
 }
 
 .wrapper {
@@ -34,4 +45,10 @@ footer {
   background-color: #FF957E;
   border: 1px black solid;
   padding: 20px;
+}
+
+footer li {
+  list-style: none;
+  text-align: right;
+  display: inline-block;
 }
