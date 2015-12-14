@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.clearfix:after {
+	content: ".";
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+nav {
+	margin: 20px 0px;
+	text-align: center;
+	font-family:cursive;
+	font-size: 24px;
+	font-weight: 400;
+}
+
+nav ul {
+	margin: 20px;
+	display:inline;
+}
+
+ul:hover {
+	color: #022068;
+}
+
+.highlight-left {
+	width: 50%
+	float:left;
+}
+
+.display-right {
+	width:50%;
+	float:left;
+}
+
+.display-left {
+	width:50%;
+	float:left;
+}
+
+.highlight-right {
+	width:50%;
+	float:left;
+}
