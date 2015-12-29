@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href='https://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+<header>
+  <nav class="fixed-nav-bar">
+    <ul> <a href="/">Our Work</a></ul>
+    <ul> <a href="order.html">Order</a></ul>
+    <ul> <a href="about.html">About</a></ul>
+  </nav>
+</header>
+<body>
+  <div class="wrapper">
+    <div class="inputform">
+      <p>Fill out the form below or email us at 
+        <a href="mailto:info@tutusentournant.com"> info@tutusentournant.com</a> and we will promptly get back to you with a quote.
+      <form method="post" name="myemailform" action="email.php">
+        Name: <br>
+        <input type="text" name="name">
+        <br>
+        Email:<br>
+        <input type="text" name="email">
+        <br>
+        Phone Number:<br>
+        <input type="text" name="phoneNumber">
+        <br>
+        Describe the project you have in mind:<br>
+        <textarea rows="15" cols="10" wrap = "hard" name="userInput" id="message">
+        </textarea>
+        <br><br>
+        <label for='uploaded_file'>Select A File To Upload:</label>
+        <input type="file" name="uploaded_file">
+        <br><br>
+          <input type="submit" name='send' value="submit">
+        </form>
+    </div>
+  </div>
+</body>
+<footer>
+</footer>
+</html>

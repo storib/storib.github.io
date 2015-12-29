@@ -1,121 +1,172 @@
-@import url('https://fonts.googleapis.com/css?family=Lora');
+@import url(https://fonts.googleapis.com/css?family=Bad+Script);
+
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  background: #FCE6F0;
+	background: url("../images/hero2.jpg") no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 500px;
+	background-color: #EBEBF7;
 }
 
-h1 {
-  text-align: Center;
-  font-family: Lora, serif;
-}
-.navbar ul {
-  list-style: none;
-  background-color: #FF9EBA;
-  text-align: right;
-  padding: 0;
-  margin: -10px 0;
+#aboutpage {
+	background: url("../images/hero4.jpg") no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+	background-color: #EBEBF7;
 }
 
-.navbar li {
-  font-family: "Raleway", serif;
-  font-size: 1.2em;
-  line-height: 40px;
-  height:40px;
-  padding: 0 5px;
-  text-align: center;
+.clearfix:after {
+	content: ".";
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
 }
 
-.navbar a {
-  text-decoration: none;
-  color: #fff;
-  display: block;
-  transiiton: .3s background-color;
-}
-.navbar a:hover {
-  background-color: #FFDBE5;
+.wrapper {
+	background-color: #EBEBF7;
+	margin-top: 450px;
+	padding-top: 1px;
 }
 
-.navbar a.active {
-  background-color: #FFDBE5;
-  color: #444;
-  cursor: default;
+.about-wrapper {
+	background-color: #EBEBF7;
+	margin-top: 450px;
+	padding-top: 1px;
 }
 
-@media screen and (min-width: 600px) {
-  .navbar li {
-    width: 120px;
-    border-bottom: none;
-    height: 50px;
-    line-height: 50px;
-    font-size:  1.4em;
-  }
-  .navbar li {
-    display: inline-block;
-    margin-right: 5px;
-  }
+nav {
+	text-align: center;
+	font-family: cursive;
+	font-weight: 600;
+	position: relative;
+	background-color: #EBEBF7;
 }
 
-/*-----------------*\
-  $carousel
-/*-----------------*/
-.carousel {
-  overflow: hidden;
-  width:100%;
-  margin: 0 auto;
-}
-.panes {
-  list-style: none;
-  position:relative;
-  width:500%;
-  overflow: hidden;
-
-  -moz-animation: carousel 60s infinite;
-  -webkit-animation: carousel 60s infinite;
-  animation: carousel 60s infinite;
+nav ul {
+	margin: 2em;
+	font-size: 2em;
+	display: inline;
 }
 
-.panes > li{
-  position:relative;
-  float:left;
-  width: 20%; /* 100 / number of pains */
+.fixed-nav-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100%;
+	height: 50px;
 }
 
-.carousel img {
-  display: block;
-  width: 50%;
-  max-width: 100%;
-  margin: auto;
-
+ul:hover {
+	color: #4C469D;
 }
 
-.carousel h2{
-  font-size: 1em;
-  padding: 0.5em;
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  left: 10px;
-  text-align:right;
-  color: #fff;
-  backgroun-color: rgba(0,0,0,.75);
+.display {
+	width: 50%;
+	float:left;
+	height: 400px;
+	overflow: hidden;
 }
 
-@keyframes carousel{
-  0%    { left:0; }
-    11%   { left:0; }
-    12.5% { left:-100%; }
-    23.5% { left:-100%; }
-    25%   { left:-200%; }
-    36%   { left:-200%; }
-    37.5% { left:-300%; }
-    48.5% { left:-300%; }
-    50%   { left:-400%; }
-    61%   { left:-400%; }
-    62.5% { left:-300%; }
-    73.5% { left:-300%; }
-    75%   { left:-200%; }
-    86%   { left:-200%; }
-    87.5% { left:-100%; }
-    98.5% { left:-100%; }
-    100%  { left:0; }
+.display p {
+	padding: 20% 10%;
+}
+
+img {
+	width:100%;
+}
+
+p {
+	font-family: "Georgia", serif;
+	line-height: 170%;
+	font-size: 1.6em;
+	font-weight: 400;
+	/*color:#022068;*/
+}
+
+/* a link edits */
+a {
+	text-decoration: none;
+	font-family: "Bad Script", cursive, "san serif";
+	color: black;
+	font-weight: 800;
+}
+
+a:hover {
+	text-decoration: none;
+	font-family: "Bad Script", cursive, "san serif";
+	color: #4C469D;
+}
+
+a:visted {
+	text-decoration: none;
+	font-family: "Bad Script", cursive, "san serif";
+	color: #4C469D;
+}
+
+article {
+	float: left;
+	width: 50%;
+	padding: 15px 25px;
+	height: 400px;
+}
+
+#headline {
+	font-size: 2.0em;
+	text-align: left;
+	font-weight: 800;
+}
+
+article p {
+	font-size: 1.4em;
+	text-align: left;
+	line-height: 150%
+}
+
+aside {
+	float: left;
+	width: 50%;
+}
+
+footer {
+	display: inline;
+	text-align: center;
+}
+/*       Input form              */
+
+.inputform p {
+	text-align: center;
+}
+
+form {
+	font-size: 1.5em;
+	text-align: center;
+	font-family: "Georgia";
+	margin: 5px;
+	line-height: 200%;
+}
+
+input[type=text] {
+	border: 1px dotted #999;
+	border-radius: 0;
+	font-size: .75em;
+}
+
+input[type=submit] {
+	border-radius: 2em;
+	font-size: 1em;
+	background-color: #FFFDF6;
+	padding: 8px;
+}
+
+#message {
+	height: 200px;
+	width: 400px;
+	font-size: .6em;
 }
