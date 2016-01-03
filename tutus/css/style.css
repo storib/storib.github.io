@@ -13,11 +13,27 @@ body {
 	background-color: #EBEBF7;
 }
 
-#aboutpage {
-	background: url("../images/hero4.jpg") no-repeat;
+#bridal-body	{
+	background: url("../images/hero4.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-attachment: fixed;
+}
+
+#about-body {
+	background: url("../images/snow1.jpg") no-repeat;
 	background-attachment: fixed;
 	background-size: 100%;
 	background-color: #EBEBF7;
+}
+
+h1 {
+	padding: 5px;
+	text-align: center;
+	word-spacing: 1px;
+	font-weight: 800;
+	font-size: 60px;
+	font-family: "Bad Script", "Georgia", cursive, serif;
 }
 
 .clearfix:after {
@@ -31,7 +47,9 @@ body {
 .wrapper {
 	background-color: #EBEBF7;
 	margin-top: 450px;
-	padding-top: 1px;
+	padding: 5px;
+	text-align: center;
+	width: 100%;
 }
 
 .about-wrapper {
@@ -40,18 +58,30 @@ body {
 	padding-top: 1px;
 }
 
-nav {
-	text-align: center;
-	font-family: cursive;
-	font-weight: 600;
-	position: relative;
-	background-color: #EBEBF7;
+footer p {
+	font-size: 11px;
 }
 
-nav ul {
-	margin: 2em;
-	font-size: 2em;
+/* ------- Nav Bar ------- */
+
+nav {
+	text-align: center;
+	font-weight: 600;
+	background-color: #EBEBF7;
+	padding-bottom: 2.5em;
+	width: 100%;
+}
+
+#order {
+	margin-left: 3em;
+	font-weight:800;
+}
+
+nav li {
+	margin: .5em;
+	font-size: 1.5em;
 	display: inline;
+	margin-right: 2em;
 }
 
 .fixed-nav-bar {
@@ -63,31 +93,112 @@ nav ul {
 	height: 50px;
 }
 
-ul:hover {
+li:hover {
 	color: #4C469D;
+}
+
+/* ------ End Nav Bar ------- */
+.container {
+	text-align: center;
+	min-height: 300px;
+	width: 100%;
+	clear: both;
+	overflow: hidden;
+	margin: 0 auto;
 }
 
 .display {
 	width: 50%;
 	float:left;
-	height: 400px;
 	overflow: hidden;
+	max-width: 40em;
 }
 
 .display p {
-	padding: 20% 10%;
+	margin-top: 4em;
+	text-align: left;
+	padding: 1% 10%;
 }
 
-img {
+.display img {
 	width:100%;
+	text-align: center;
+	vertical-align: center;
 }
+/* ---------Gallery---------- CSS */
+.gallery-links {
+	margin: 0 auto;
+	font-size: 2em;
+	font-family: "Georgia", serif;
+}
+
+.gallery-links ul {
+	margin: 50px;
+	text-align: center;
+}
+
+.gallery-links li {
+	display: inline;
+	margin: 0 25px;
+	box-shadow: 1px 1px 1px 1px #999;
+	margin-top: 3px;
+	padding: 9px;
+	background-color: #7D81CF;
+	color: #FFF;
+	font-weight: 200;
+	border-radius: 20px;
+
+}
+.gallery-links li:hover {
+	color: #000;
+}
+
+.gallery-links a {
+	font-family: "Georgia", serif;
+	font-size: 30px;
+}
+
+.gallery-links a:hover {
+	font-family: "Georgia", serif;
+	font-size: 30px;
+}
+
+.gallery-container {
+	background-color: #EBEBF7;
+	overflow: hidden;
+	width: 712px;
+	margin: 0 auto;
+}
+.gallery-container ul {
+	list-style: none;
+	background-color: #EBEBF7;
+	margin: 0 auto;
+}
+
+.gallery-container li {
+	float: left;
+	margin: 10px;
+}
+
+.gallery-container img {
+	display: block;
+	padding: 1px;
+	background-color: #999;
+	border: 1px solid #999;
+	box-shadow: 1px 1px 2px;
+}
+
+.gallery img:hover {
+	border: 1px solid #000;
+}
+
+/*end Gallery CSS */
 
 p {
 	font-family: "Georgia", serif;
 	line-height: 170%;
 	font-size: 1.6em;
 	font-weight: 400;
-	/*color:#022068;*/
 }
 
 /* a link edits */
@@ -95,7 +206,7 @@ a {
 	text-decoration: none;
 	font-family: "Bad Script", cursive, "san serif";
 	color: black;
-	font-weight: 800;
+	font-weight: 200;
 }
 
 a:hover {
@@ -110,11 +221,33 @@ a:visted {
 	color: #4C469D;
 }
 
+.no-font {
+	font-family: "Georgia", serif;
+	line-height: 170%;
+	font-size: inherit;
+	font-weight: inherit;
+	text-decoration: underline;
+}
+
+.no-font:hover {
+	font-family: "Georgia", serif;
+	line-height: 170%;
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+.no-font:visited {
+	font-family: "Georgia", serif;
+	line-height: 170%;
+	font-size: inherit;
+	font-weight: inherit;
+}
+
 article {
 	float: left;
 	width: 50%;
 	padding: 15px 25px;
-	height: 400px;
+	background-color: #EBEBF7;
 }
 
 #headline {
@@ -132,11 +265,12 @@ article p {
 aside {
 	float: left;
 	width: 50%;
-}
+	margin: 5px auto;}
 
 footer {
-	display: inline;
+	display: block;
 	text-align: center;
+	clear: both;
 }
 /*       Input form              */
 
@@ -168,5 +302,10 @@ input[type=submit] {
 #message {
 	height: 200px;
 	width: 400px;
+	font-size: .6em;
+}
+
+#fileToUpload {
+	font-family: "Georgia", serif;
 	font-size: .6em;
 }

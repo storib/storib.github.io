@@ -1,41 +1,56 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link href='https://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-71945416-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</head>
 <header>
   <nav class="fixed-nav-bar">
-    <ul> <a href="/">Our Work</a></ul>
-    <ul> <a href="order.html">Order</a></ul>
-    <ul> <a href="about.html">About</a></ul>
+    <ul> 
+      <li> <a href="/">Ballet Costumes</a></li>
+      <li> <a href="bridal.html">Bridal/Special Occasion</a></li>
+      <li> <a href="about.html">About</a></li>
+      <li> <a href="gallery.html">Gallery</a></li>
+      <li> <a href="order.html" id="order">Order</a></li>
+  </ul>
   </nav>
-</header>
 <body>
   <div class="wrapper">
     <div class="inputform">
-      <p>Fill out the form below or email us at 
-        <a href="mailto:info@tutusentournant.com"> info@tutusentournant.com</a> and we will promptly get back to you with a quote.
-      <form method="post" name="myemailform" action="email.php">
+      <p>For more information, please complete the form below or email us at
+        <a href="mailto:info@tutusentournant.com" class="no-font"> info@tutusentournant.com</a> and we will promptly get back with you to discuss your project. <br><br>Please note that we currently only ship within the US. <br><br> For clients in the Portland/Vancouver metropolitan area, we have a beautiful studio located in Vancouver, WA for personal fittings.
+      <form method="post" name="orderform" action="email.php" enctype="multipart/form-data">
         Name: <br>
-        <input type="text" name="name">
+        <input type="text" name="s_name">
         <br>
         Email:<br>
-        <input type="text" name="email">
+        <input type="text" name="s_email">
         <br>
         Phone Number:<br>
         <input type="text" name="phoneNumber">
         <br>
         Describe the project you have in mind:<br>
-        <textarea rows="15" cols="10" wrap = "hard" name="userInput" id="message">
+        <textarea rows="15" cols="10" wrap = "hard" name="s_message" id="message">
         </textarea>
         <br><br>
-        <label for='uploaded_file'>Select A File To Upload:</label>
-        <input type="file" name="uploaded_file">
+        <label for='uploaded_file'>If you have a picture or sketch, please feel free to upload below:<br></label>
+        <input type="file" name="fieldAttachment" id="fileToUpload">
         <br><br>
           <input type="submit" name='send' value="submit">
         </form>
     </div>
   </div>
 </body>
-<footer>
+<footer> &copy; Tutus en Tournant
 </footer>
 </html>
