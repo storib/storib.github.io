@@ -9,8 +9,9 @@
 body {
 	background: url("../images/hero2.jpg") no-repeat;
 	background-attachment: fixed;
-	background-size: 100% 500px;
+	background-size: 100%;
 	background-color: #EBEBF7;
+	font-size: 16px;
 }
 
 #bridal-body	{
@@ -18,6 +19,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-attachment: fixed;
+	background-color: #EBEBF7;
 }
 
 #about-body {
@@ -27,12 +29,17 @@ body {
 	background-color: #EBEBF7;
 }
 
+.hero {
+	width: 100%;
+	height: 20em;
+}
+
 h1 {
-	padding: 5px;
+	padding: .4em;
 	text-align: center;
 	word-spacing: 1px;
 	font-weight: 800;
-	font-size: 60px;
+	font-size: 2.4em;
 	font-family: "Bad Script", "Georgia", cursive, serif;
 }
 
@@ -46,20 +53,19 @@ h1 {
 
 .wrapper {
 	background-color: #EBEBF7;
-	margin-top: 450px;
-	padding: 5px;
 	text-align: center;
 	width: 100%;
+	margin: 0 auto;
 }
 
 .about-wrapper {
 	background-color: #EBEBF7;
-	margin-top: 450px;
-	padding-top: 1px;
+	margin-top: 29em;
+	padding-top: .06em;
 }
 
 footer p {
-	font-size: 11px;
+	font-size: .5em;
 }
 
 /* ------- Nav Bar ------- */
@@ -68,20 +74,18 @@ nav {
 	text-align: center;
 	font-weight: 600;
 	background-color: #EBEBF7;
-	padding-bottom: 2.5em;
 	width: 100%;
 }
 
 #order {
-	margin-left: 3em;
+	padding-left: 3em;
 	font-weight:800;
 }
 
 nav li {
-	margin: .5em;
-	font-size: 1.5em;
+	font-size: 1.4em;
 	display: inline;
-	margin-right: 2em;
+	padding: 1em;
 }
 
 .fixed-nav-bar {
@@ -90,7 +94,6 @@ nav li {
 	left: 0;
 	z-index: 9999;
 	width: 100%;
-	height: 50px;
 }
 
 li:hover {
@@ -100,7 +103,7 @@ li:hover {
 /* ------ End Nav Bar ------- */
 .container {
 	text-align: center;
-	min-height: 300px;
+	min-height: 18.75em;
 	width: 100%;
 	clear: both;
 	overflow: hidden;
@@ -108,6 +111,7 @@ li:hover {
 }
 
 .display {
+	display: table;
 	width: 50%;
 	float:left;
 	overflow: hidden;
@@ -115,15 +119,26 @@ li:hover {
 }
 
 .display p {
-	margin-top: 4em;
 	text-align: left;
 	padding: 1% 10%;
+	vertical-align: middle;
+}
+
+.img-table {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.text-display {
+	padding-top: 5em;
 }
 
 .display img {
-	width:100%;
+	width: 100%;
 	text-align: center;
 	vertical-align: center;
+	overflow: hidden;
 }
 /* ---------Gallery---------- CSS */
 .gallery-links {
@@ -133,20 +148,20 @@ li:hover {
 }
 
 .gallery-links ul {
-	margin: 50px;
+	margin: 3em;
 	text-align: center;
 }
 
 .gallery-links li {
 	display: inline;
-	margin: 0 25px;
-	box-shadow: 1px 1px 1px 1px #999;
-	margin-top: 3px;
-	padding: 9px;
+	margin: 0 .5em;
+	box-shadow: .01em .01em .01em .02em #999;
+	margin-top: 2em;
+	padding: .4em;
 	background-color: #7D81CF;
 	color: #FFF;
 	font-weight: 200;
-	border-radius: 20px;
+	border-radius: 1.2em;
 
 }
 .gallery-links li:hover {
@@ -155,12 +170,12 @@ li:hover {
 
 .gallery-links a {
 	font-family: "Georgia", serif;
-	font-size: 30px;
+	font-size: 1em;
 }
 
 .gallery-links a:hover {
 	font-family: "Georgia", serif;
-	font-size: 30px;
+	font-size: 1em;
 }
 
 .gallery-container {
@@ -177,7 +192,7 @@ li:hover {
 
 .gallery-container li {
 	float: left;
-	margin: 10px;
+	margin: .7em;
 }
 
 .gallery-container img {
@@ -197,7 +212,7 @@ li:hover {
 p {
 	font-family: "Georgia", serif;
 	line-height: 170%;
-	font-size: 1.6em;
+	font-size: 1.2em;
 	font-weight: 400;
 }
 
@@ -265,12 +280,14 @@ article p {
 aside {
 	float: left;
 	width: 50%;
-	margin: 5px auto;}
+	margin: 5px auto;
+}
 
 footer {
 	display: block;
 	text-align: center;
 	clear: both;
+	background-color: #EBEBF7;
 }
 /*       Input form              */
 
@@ -282,7 +299,7 @@ form {
 	font-size: 1.5em;
 	text-align: center;
 	font-family: "Georgia";
-	margin: 5px;
+	margin: 3.125em;
 	line-height: 200%;
 }
 
@@ -296,16 +313,129 @@ input[type=submit] {
 	border-radius: 2em;
 	font-size: 1em;
 	background-color: #FFFDF6;
-	padding: 8px;
+	padding: .5em;
 }
 
 #message {
-	height: 200px;
-	width: 400px;
+	height: 12.5em;
+	width: 25em;
 	font-size: .6em;
 }
 
 #fileToUpload {
 	font-family: "Georgia", serif;
 	font-size: .6em;
+}
+
+
+/* ----- Media Queries ----- */
+@media only screen and (max-width: 900px) {
+	h1 {
+		font-size: 2em;
+	}
+	p {
+		font-size: 1em;
+	}
+
+	.gallery-links li{
+		display: block;
+		padding: .2em;
+		margin: .2em;
+	}
+}
+
+@media only screen and (max-width: 750px) {
+
+.hero {
+	height: 10em;
+}
+
+.menu-btn div {
+	position: absolute;
+	left: 100%;
+	top: 64%;
+	padding-right: 8px;
+	margin-top: -0.50em;
+	line-height: 1.2;
+	font-size: 18px;
+	font-weight: 200;
+	vertical-align: middle;
+	z-index: 99;
+	background-color: #EBEBF7;
+}
+
+.menu-btn span {
+	display: block;
+	width: 19px;
+	height: 3px;
+	margin: 4px 0;
+	background: rgb(0,0,0);
+	z-index: 99;
+}
+
+.responsive-menu{
+	display: none;
+}
+
+.expand {
+	display: block !important; 
+}
+
+.open-menu-link{
+	display: none;
+	position: absolute;
+	right: 15px;
+	top:0;
+	line-height: 55px;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+li .sub-menu{
+	display: none;
+}
+
+.visible {
+	display: block !important;
+}
+
+
+	.display {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+
+	.display p {
+		text-align: center;
+	}
+
+	.text-display {
+		padding: 0em;
+	}
+}
+
+@media only screen and (max-width: 705px) {
+	/*body, #bridal-body {
+		background: none;
+		background-color: #EBEBF7;
+	}*/
+
+	.hero {
+		height: 10em;
+	}
+
+	nav li {
+		display: block;
+		border: 1px solid #FFF;
+		padding: .2em;
+		box-shadow: .01em .01em .01em .04em #FFF;
+
+	}
+
+
+
+	#order {
+		padding: 0em;
+	}
 }

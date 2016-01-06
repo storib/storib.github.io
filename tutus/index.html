@@ -10,64 +10,117 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
     ga('create', 'UA-71945416-1', 'auto');
     ga('send', 'pageview');
-
   </script>
-</head>
-<header>
-  <nav class="fixed-nav-bar">
-    <ul> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <div class="mobile-nav">
+     <div class="menu-btn" id="menu-btn">
+  <div></div>
+  <span></span>
+  <span></span>
+  <span></span>
+     </div>
+  <nav class="responsive-menu">
+    <ul>
       <li> <a href="/">Ballet Costumes</a></li>
       <li> <a href="bridal.html">Bridal/Special Occasion</a></li>
       <li> <a href="about.html">About</a></li>
       <li> <a href="gallery.html">Gallery</a></li>
       <li> <a href="order.html" id="order">Order</a></li>
-  </ul>
+    </ul>
   </nav>
+</div>
+
 </header>
 <body>
+  <div class="hero"></div>
   <div class="wrapper">
     <section class="clearfix">
       <h1>Classical Ballet Tutus Professionally Made for You</h1>
       <div class="container">
         <div class="display">
+          <div class="text-display">
             <p>Tutus en Tournant offers custom made, professional quality Ballet costumes, including Classical ballet tutus, Romantic style ballet tutus, and Victorian style gowns in women and girls sizes.
             </p>
+          </div>
         </div>
         <div class="display">
-          <img src="images/snow.jpg" alt ="classical tutus">
+          <div class="img-table">
+            <img src="images/snow.jpg" alt ="classical tutus">
+          </div>
         </div>
       </div>
       <div class="container">
         <div class="display">
-          <img src = "images/tutu1.jpg" alt="professional tutu">
+          <div class="img-table">
+            <img src = "images/tutu1.jpg" alt="professional tutu">
+          </div>
         </div>
         <div class="display">
-          <p>We work with ballet companies, independent studios, and dancers. Our costumes will accentuate any performance.</p>
+          <div class="text-display">
+            <p>We work with ballet companies, independent studios, and dancers. Our costumes will accentuate any performance.</p>
+          </div>
+      </div>
+      </div>
+      <div class="container">
+        <div class="display">
+          <div class="text-display">
+            <p>Our design expert will work with you to produce a costume that exceeds your standards at an affordable price.</p>
+          </div>
+      </div>
+        <div class="display">
+          <div class="img-table">
+            <img src="images/black_swan.jpg" alt="black swan">
+          </div>
         </div>
       </div>
       <div class="container">
         <div class="display">
-          <p>Our design expert will work with you to produce a costume that exceeds your standards at an affordable price.</p>
+          <div class="img-table">
+            <img src="images/tutu2.jpg" alt="girls tutu">
+          </div>
         </div>
-
         <div class="display">
-          <img src="images/black_swan.jpg" alt="black swan">
+          <div class="text-display">
+            <p>Let us make your dream tutu come true!  We will make you feel beautiful and comfortable on stage! </p>
+          </div>
         </div>
       </div>
-      <div class="container">
-        <div class="display">
-          <img src="images/tutu2.jpg" alt="girls tutu">
-        </div>
-        <div class="display">
-          <p>Let us make your dream tutu come true!  We will make you feel beautiful and comfortable on stage! </p>
-        </div>
-      </div>
-
     </section>
   </div>
   </body>
-<footer><p>Some of the photo credits on my website were taken with permission from Columbia Dance Center, Vancouver WA <br>&copy; Tutus en Tournant</p></footer>
+<footer>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+    jQuery(function($){
+           $( '.menu-btn' ).click(function(){
+           $('.responsive-menu').toggleClass('expand')
+           })
+        })
+
+
+  jQuery(document).ready(function($){
+  
+      $('.open').addClass('visible');
+  
+      $('.open-menu-link').click(function(e){
+          var childMenu =  e.currentTarget.parentNode.children[1];
+          if($(childMenu).hasClass('visible')){
+              $(childMenu).removeClass("visible");
+  
+              $(e.currentTarget.parentNode.children[3]).removeClass("visible");
+              $(e.currentTarget.parentNode.children[2]).addClass("visible");
+          } else {
+              $(childMenu).addClass("visible");
+  
+              $(e.currentTarget.parentNode.children[2]).removeClass("visible");
+              $(e.currentTarget.parentNode.children[3]).addClass("visible");
+          }
+      });
+  });
+</script>
+
+
+  <p>Some of the photo credits on my website were taken with permission from Columbia Dance Center, Vancouver WA <br>&copy; Tutus en Tournant</p></footer>
 </html>
