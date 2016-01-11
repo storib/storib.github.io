@@ -25,32 +25,25 @@
   </ul>
   </nav>
 <body>
+  <div class="hero"></div>
   <div class="wrapper">
+    <h1>To set up a consultation call, please fill out the below form. We'll get back to you as quickly as possible to discuss your project</h1>
     <div class="inputform">
-      <p>For more information, please complete the form below or email us at
-        <a href="mailto:info@tutusentournant.com" class="no-font"> info@tutusentournant.com</a> and we will promptly get back with you to discuss your project. <br><br>Please note that we currently only ship within the US. <br><br> For clients in the Portland/Vancouver metropolitan area, we have a beautiful studio located in Vancouver, WA for personal fittings.
+      <p>You may also contact us at
+        <a href="mailto:info@tutusentournant.com" class="no-font"> info@tutusentournant.com</a></p>
       <form method="post" name="orderform" action="email.php" enctype="multipart/form-data">
-        Name: <br>
-        <input type="text" name="s_name">
-        <br>
-        Email:<br>
-        <input type="text" name="s_email">
-        <br>
-        Phone Number:<br>
-        <input type="text" name="phoneNumber">
-        <br>
-        Describe the project you have in mind:<br>
-        <textarea rows="15" cols="10" wrap = "hard" name="s_message" id="message">
-        </textarea>
-        <br><br>
-        <label for='uploaded_file'>If you have a picture or sketch, please feel free to upload below:<br></label>
+        <input type="text" name="s_name" placeholder="First and Last Name"><br>
+        <input type="text" name="s_email" placeholder="Email"><br>
+        <input type="text" name="phoneNumber" placeholder="Phone Number"><br><br>
+        <textarea name="s_message"id="message"placeholder="Please describe the project you have in mind"rows="5"cols="30"></textarea><br><br>
         <input type="file" name="fieldAttachment" id="fileToUpload">
         <br><br>
-          <input type="submit" name='send' value="submit">
+          <input type="submit" name='send' value="Submit">
         </form>
+        <br>
+        <p id="disclaimer">Please note that we currently only ship within the US. <br> For clients in the Portland/Vancouver metropolitan area, we have a beautiful studio located in Vancouver, WA for personal fittings.<p>
     </div>
   </div>
 </body>
-<footer> &copy; Tutus en Tournant
-</footer>
+<footer> &copy; Tutus en Tournant</footer>
 </html>
