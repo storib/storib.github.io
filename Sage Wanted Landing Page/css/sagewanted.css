@@ -5,7 +5,7 @@ h1,h2,h3 {
 }
 
 h2 {
-	padding: 1em;
+	padding: .75em;
 	border-top: solid 1px gray;
 }
 
@@ -25,6 +25,15 @@ h2 {
 	font-weight: 300;
 	font-family: "Nunito";
 	border-radius: 10px;
+}
+
+#cta-green {
+	font-size: 3rem;
+	font-weight: 300;
+	font-family: "Nunito";
+	border-radius: 10px;
+	background-color: #a3ccb2;
+	color: #FFF;
 }
 
 .row {
