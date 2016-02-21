@@ -1,12 +1,4 @@
-form {
-	display: inline-block;
-}
-
-label {
-	color: #FFFFFF;
-}
-
-h2,h3 {
+h1,h2,h3 {
 	font-family: "Raleway";
 	text-align: center;
 	font-weight: 400;
@@ -44,6 +36,13 @@ h2 {
 	background: #a3ccb2;
 	text-align: center;
 	height: 400px;
+	margin-bottom: 2em;
+}
+
+#hero-sup {
+	background: #a3ccb2;
+	text-align: center;
+	height: 200px;
 	margin-bottom: 2em;
 }
 
@@ -103,4 +102,16 @@ footer {
 	border-top: solid 1px black;
 	text-align: center;
 	font-size: .5rem;
+	background-color: white;
+}
+
+/* ------ Sign-Up Page ----- */
+
+.opposingcolor {
+	background-color: #a3ccb2;
+}
+
+label {
+	color: #FFFFFF;
+	font-size: 1.5rem;
 }

@@ -198,7 +198,7 @@ input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
   color: #333;
-  border-color: #888;
+  border-color: #c4decd;
   outline: 0; }
 .button.button-primary,
 button.button-primary,
@@ -238,7 +238,7 @@ select {
   height: 38px;
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
   background-color: #fff;
-  border: 1px solid #D1D1D1;
+  border: 1px solid #c4decd;
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box; }
@@ -267,7 +267,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #33C3F0;
+  border: 1px solid #c4decd;
   outline: 0; }
 label,
 legend {
