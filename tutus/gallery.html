@@ -48,6 +48,7 @@
 				<li><a href="gallery-wedding.html">Special Occasion</a></li>
 			</ul>
 		</div>
+		<h2> To set up a consultation call for your tutu or project, please click <a href="order.html" class="weblink"> here</a>.</h2><br>
 		<section class="gallery-container">
 			<a class="fancybox" rel="group" href="gallery/lg/img1.jpg" title="Classical solo tutu"><img src="gallery/tn/img1.jpg" alt="professional tutu" class="thumbnail"></a>
 			<a class="fancybox" rel="group" href="gallery/lg/img2.jpg" title="Nutcracker snow demi-soloist romantic tutus"><img src="gallery/tn/img2.jpg" alt="wedding dress" class="thumbnail"></a>
@@ -70,5 +71,34 @@
 	});
 	</script>
 </body>
-<footer><br>&copy; Tutus en Tournant</footer>
+<footer>
+<script type="text/javascript">
+    jQuery(function($){
+           $( '.menu-btn' ).click(function(){
+           $('.responsive-menu').toggleClass('expand')
+           })
+        })
+
+
+  jQuery(document).ready(function($){
+  
+      $('.open').addClass('visible');
+  
+      $('.open-menu-link').click(function(e){
+          var childMenu =  e.currentTarget.parentNode.children[1];
+          if($(childMenu).hasClass('visible')){
+              $(childMenu).removeClass("visible");
+  
+              $(e.currentTarget.parentNode.children[3]).removeClass("visible");
+              $(e.currentTarget.parentNode.children[2]).addClass("visible");
+          } else {
+              $(childMenu).addClass("visible");
+  
+              $(e.currentTarget.parentNode.children[2]).removeClass("visible");
+              $(e.currentTarget.parentNode.children[3]).addClass("visible");
+          }
+      });
+  });
+</script>
+&copy; Tutus en Tournant</footer>
 </html>

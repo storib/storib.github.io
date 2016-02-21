@@ -1,0 +1,106 @@
+form {
+	display: inline-block;
+}
+
+label {
+	color: #FFFFFF;
+}
+
+h2,h3 {
+	font-family: "Raleway";
+	text-align: center;
+	font-weight: 400;
+}
+
+h2 {
+	padding: 1em;
+	border-top: solid 1px gray;
+}
+
+#firsth2 {
+	border-top: none;
+}
+
+#logo {
+	text-align: left;
+	padding-left: 1em;
+	background: #FFFFFF;
+	margin-top: 2em;
+}
+
+#cta {
+	font-size: 3rem;
+	font-weight: 300;
+	font-family: "Nunito";
+	border-radius: 10px;
+}
+
+.row {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+#hero {
+	background: #a3ccb2;
+	text-align: center;
+	height: 400px;
+	margin-bottom: 2em;
+}
+
+.theme {
+	font-weight: 400;
+	font-family: "Raleway";
+	color:#a3ccb2;
+}
+
+.callout {
+	font-weight: 400;
+	color: #c4decd;
+}
+
+#hero h3 {
+	font-size: 5rem;
+	padding-top: 2em;
+	color: #FFFFFF;
+
+}
+
+.one-half.column {
+	text-align: center;
+}
+
+.one-half.column img, {
+	display: inline-block;
+	width: 50%;
+	padding-bottom: 2rem;
+}
+
+.one-half.column p {
+	font-size: 2rem;
+	font-weight: 300;
+	padding-top: 2rem;
+}
+
+#solution {
+	text-align: center;
+	font-size: 3rem;
+	font-weight: 300;
+}
+
+#solutionimg {
+	text-align: center;
+}
+
+.swimg {
+	display: inline-block;
+}
+
+#signup {
+	text-align: center;
+}
+
+footer {
+	border-top: solid 1px black;
+	text-align: center;
+	font-size: .5rem;
+}

@@ -14,16 +14,25 @@
 
   </script>
 </head>
-<header>
-  <nav class="fixed-nav-bar">
-    <ul> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <div class="mobile-nav">
+     <div class="menu-btn" id="menu-btn">
+  <div></div>
+  <span></span>
+  <span></span>
+  <span></span>
+     </div>
+  <nav class="responsive-menu">
+    <ul>
       <li> <a href="/">Ballet Costumes</a></li>
       <li> <a href="bridal.html">Bridal/Special Occasion</a></li>
       <li> <a href="about.html">About</a></li>
       <li> <a href="gallery.html">Gallery</a></li>
       <li> <a href="order.html" id="order">Order</a></li>
-  </ul>
+    </ul>
   </nav>
+</div>
+</header>
 <body>
   <div class="hero"></div>
   <div class="wrapper">
@@ -34,8 +43,8 @@
       <form method="post" name="orderform" action="email.php" enctype="multipart/form-data">
         <input type="text" name="s_name" placeholder="First and Last Name"><br>
         <input type="text" name="s_email" placeholder="Email"><br>
-        <input type="text" name="phoneNumber" placeholder="Phone Number"><br><br>
-        <textarea name="s_message"id="message"placeholder="Please describe the project you have in mind"rows="5"cols="30"></textarea><br><br>
+        <input type="text" name="phoneNumber" placeholder="Phone Number (Optional)"><br><br>
+        <textarea name="s_message"id="message" placeholder="Include a message about your project"rows="5"cols="30"></textarea><br><br>
         <input type="file" name="fieldAttachment" id="fileToUpload">
         <br><br>
           <input type="submit" name='send' value="Submit">
@@ -45,5 +54,36 @@
     </div>
   </div>
 </body>
-<footer> &copy; Tutus en Tournant</footer>
+<footer> 
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+    jQuery(function($){
+           $( '.menu-btn' ).click(function(){
+           $('.responsive-menu').toggleClass('expand')
+           })
+        })
+
+
+  jQuery(document).ready(function($){
+  
+      $('.open').addClass('visible');
+  
+      $('.open-menu-link').click(function(e){
+          var childMenu =  e.currentTarget.parentNode.children[1];
+          if($(childMenu).hasClass('visible')){
+              $(childMenu).removeClass("visible");
+  
+              $(e.currentTarget.parentNode.children[3]).removeClass("visible");
+              $(e.currentTarget.parentNode.children[2]).addClass("visible");
+          } else {
+              $(childMenu).addClass("visible");
+  
+              $(e.currentTarget.parentNode.children[2]).removeClass("visible");
+              $(e.currentTarget.parentNode.children[3]).addClass("visible");
+          }
+      });
+  });
+</script>
+
+  &copy; Tutus en Tournant</footer>
 </html>

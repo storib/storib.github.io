@@ -1,5 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Bad+Script);
+/*
+    I'm not sure you need compass for this project, but its possible. I don't see it locally though, how are you importing it?
+*/
 @import "compass/css3";
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 
 * {
   margin:0;
@@ -8,9 +11,7 @@
 }
 
 body {
-	background: url("../images/hero2.jpg") no-repeat;
-	background-attachment: fixed;
-	background-size: 100%;
+	font-family: "Georgia", serif;
 	background-color: #EBEBF7;
 	font-size: 16px;
 }
@@ -35,15 +36,62 @@ body {
 	height: 20em;
 }
 
+
+/*
+    In general, general typography classes like h1 and h2 here should only contain info about the font itself. Other stuff like padding, text-align, etc. belong in more specific instance rules of h1.
+
+    SUGGESTION:
+    h1 {
+        font-weight: 400;
+        font-size: 32px;
+        font-family: 'Georgia', serif;
+        line-height: 1.4em;
+    }
+
+    .some-div-where .the-h1-tag-needs-space h1 {
+        margin-bottom: 1em;
+        letter-spacing: .4em;
+    }
+
+    Since you can't anticipate the spacing required for text tags, make sure that styles related only to them stay in these general global statements.
+
+*/
+
 h1 {
-	padding: .4em;
-	text-align: center;
-	word-spacing: 1px;
 	font-weight: 800;
 	font-size: 2.4em;
-	font-family: "Bad Script", "Georgia", cursive, serif;
+	font-family: "Georgia", cursive, serif;
 }
 
+h2 {
+	font-family: "Georgia", serif;
+	font-size: 1.2em;
+	font-weight: 800;
+}
+
+/*
+    .instead of this 'weblink' class, you should be styling the a tag directly.
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+*/
+
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+    /* you're using lots of web safe colors, hex values/RGB colors will give you more color freedom. */
+	color: blue;
+}
+
+/* this is pretty sophisticated CSS. do you know what its doing? i'm not entirely sure */
 .clearfix:after {
 	content: ".";
 	visibility: hidden;
@@ -52,6 +100,7 @@ h1 {
 	clear: both;
 }
 
+/* this class-name seems very general. you may accidentally be styling other things */
 .wrapper {
 	background-color: #EBEBF7;
 	text-align: center;
@@ -75,6 +124,11 @@ nav {
 	background-color: #EBEBF7;
 	width: 100%;
 }
+
+/*
+    This is a hacky way of emphasizing 'Order' in the menu,
+    but it works. It also decenters the other options. Ask me for suggestions here
+*/
 
 #order {
 	padding-left: 3em;
@@ -109,6 +163,7 @@ li:hover {
 	display: inline-block;
 }
 
+/* this class-name seems very general. you may accidentally be styling other things */
 .display {
 	display: table;
 	width: 50%;
@@ -141,7 +196,8 @@ li:hover {
 }
 /* ---------Gallery---------- CSS */
 .gallery-links {
-	font-size: 2em;
+	padding-top: .5em;
+	font-size: 1.5em;
 	font-family: "Georgia", serif;
 	clear: both;
 }
@@ -163,7 +219,7 @@ li:hover {
 	border-radius: 1.1em;
 }
 .gallery-links li:hover {
-	color: #000;
+	color: #FFF;
 }
 
 .gallery-links a {
@@ -212,45 +268,13 @@ p {
 }
 
 /* a link edits */
-a {
-	text-decoration: none;
-	font-family: "Bad Script", cursive, "san serif";
-	color: black;
-	font-weight: 200;
-}
 
-a:hover {
-	text-decoration: none;
-	font-family: "Bad Script", cursive, "san serif";
-	color: #4C469D;
-}
+/* what are ".weblinks" doing if you have them styled here? */
 
 a:visted {
 	text-decoration: none;
 	font-family: "Bad Script", cursive, "san serif";
 	color: #4C469D;
-}
-
-.no-font {
-	font-family: "Georgia", serif;
-	line-height: 170%;
-	font-size: inherit;
-	font-weight: inherit;
-	text-decoration: underline;
-}
-
-.no-font:hover {
-	font-family: "Georgia", serif;
-	line-height: 170%;
-	font-size: inherit;
-	font-weight: inherit;
-}
-
-.no-font:visited {
-	font-family: "Georgia", serif;
-	line-height: 170%;
-	font-size: inherit;
-	font-weight: inherit;
 }
 
 article {
@@ -291,7 +315,7 @@ input {
   letter-spacing: .01em;
   font-style: normal;
   font-weight: 300;
-  font-family: source-sans-pro;
+  font-family: "Sans Source Pro";
   text-align: left;
 }
 
@@ -305,13 +329,14 @@ input {
 }
 
 #message {
-	min-height: 10em;
-	margin: 0 auto;
 	overflow-y: hidden;
 	resize: none;
 	-webkit-transition: height .1s;
 	-moz-transition: height .1s;
 	transition: height .1s;
+	height: 12.5em;
+	width: 20em;
+	font-size: .6em;
 }
 
 textarea:focus {
@@ -322,8 +347,6 @@ textarea:focus {
 textarea {
 	  margin-top: .8em;
 	  margin: 0 auto;
-	  width: 31.25em;
-	  height: 10em;
 	  -moz-border-bottom-colors: none;
 	  -moz-border-left-colors: none;
 	  -moz-border-right-colors: none;
@@ -360,7 +383,7 @@ input[type=text] {
 }
 
 input[type="file"]{
-  height: 0em; 
+  height: 0em;
 }
 input[type="file"]:before {
 	content: 'Click to upload an optional project file';
@@ -395,12 +418,6 @@ input[type=submit]:hover {
 	background-color: #EEE;
 }
 
-#message {
-	height: 12.5em;
-	width: 25em;
-	font-size: .6em;
-}
-
 #fileToUpload {
 	font-family: "Georgia", serif;
 	font-size: .6em;
@@ -426,14 +443,20 @@ input[type=submit]:hover {
 		width: 40%;
 		padding: .3em;
 		margin: .1em auto;
-		font-size: .8em;
+		font-size: .7em;
+		padding-top: 0em;
 	}
 
 	.gallery-links a {
 		font-family: "Georgia", serif;
-		font-size: 1em;
+		font-size: .8em;
 	}
 }
+
+
+/*
+    It's a good idea to keep your media queries tucked next to the elements they're restyling so that you can modify them without scrolling back and forth.
+ */
 
 @media only screen and (max-width: 770px) {
 
@@ -495,7 +518,7 @@ nav li {
 }
 
 .expand {
-	display: block !important; 
+	display: block !important;
 }
 
 .open-menu-link{
@@ -549,10 +572,52 @@ li .sub-menu{
 	.gallery-links a {
 	font-family: "Georgia", serif;
 	font-size: .8em;
-}
+	}
 
 	#order {
 		padding: 0em;
+	}
+	.inputform {
+		padding: 0em;
+		width: 100%;
+		margin: 0 auto;
+		padding-top: 1em;
+		background-color: #F2F2FB;
+		border: 1px solid #999
+	}
+
+	#fileToUpload {
+		text-align: center;
+		font-size: .5em
+	}
+
+	textarea {
+	  -moz-border-bottom-colors: none;
+	  -moz-border-left-colors: none;
+	  -moz-border-right-colors: none;
+	  -moz-border-top-colors: none;
+	  background: none repeat scroll 0 0 #FFFFFF;
+	  border-color: -moz-use-text-color #FFFFFF #FFFFFF -moz-use-text-color;
+	  border-radius: .5em .5em .5em .5em;
+	  border-style: none solid solid none;
+	  border-width: medium .01em .01em medium;
+	  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
+	  color: #555555;
+	  font-family: source-sans-pro; sans-serif;
+	  font-weight: 300;
+	  font-size: 1.2em;
+	  line-height: 1.5em;
+	  text-align: left;
+	  padding: .4em .5em;
+	}
+
+#message {
+	overflow-y: hidden;
+	resize: none;
+	width: 15em;
+	-webkit-transition: height .1s;
+	-moz-transition: height .1s;
+	transition: height .1s;
 	}
 }
 
@@ -560,6 +625,10 @@ li .sub-menu{
 
 	.gallery-container a {
 	width: 50%;
-}
+	}
+
+	.wrapper h1 {
+		font-size: 1.5em;
+	}
 
 }
