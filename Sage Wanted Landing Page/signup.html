@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <title>SageWanted.com</title>
+  <meta name="description" content="SageWanted - Find your Sage!">
+  <meta name="author" content="SageWanted.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,200,100' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
@@ -22,11 +22,11 @@
     <h1>Fill in the Information Below to Sign-Up</h1>
     <div class="opposingcolor">
     <div class="container">
-      <form>
+      <form method="post" name="signupsheet" action="email.php" enctype="multipart/form-data">
         <div class="row">
           <div class="one-half column">
             <label for="nameInput">First and Last Name</label>
-            <input class="u-full-width" type="email" placeholder="First Last Name" name="nameInput">
+            <input class="u-full-width" type="text" placeholder="First Last Name" name="nameInput">
           </div>
           <div class="one-half column">
             <label for="emailInput">Your Email Address</label>
@@ -44,8 +44,8 @@
             </select>
           </div>
           <div class="one-half column">
-            <label for="sageRegistration">I'm interested in the following subject</label>
-            <select class="u-full-width" id="sageRegistration">
+            <label for="subjects">I'm interested in the following subject</label>
+            <select class="u-full-width" id="subjects">
               <option value=" " selected disabled> Select Your Interest </option>
               <option value="Option 1">Coding (C++, Python, Ruby, HTML/CSS, Other)</option>
               <option value="Option 2">Business/Finance</option>
