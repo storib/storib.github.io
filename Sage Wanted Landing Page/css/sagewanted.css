@@ -98,12 +98,18 @@ h2 {
 	text-align: center;
 }
 
+
 .swimg {
 	display: inline-block;
 }
 
 #signup {
 	text-align: center;
+}
+
+#howitworks {
+	text-align: center;
+	width: 100%;
 }
 
 footer {
@@ -128,6 +134,10 @@ label {
 @media (max-width: 580px) {
   img {
   	width: 80%;
+  	text-align: center;
   }
+  #logopic {
+  	width: 30%;
+	}
 }
 

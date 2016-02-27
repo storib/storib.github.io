@@ -24,7 +24,7 @@ $message = Swift_message::newInstance('New Signup')
     "adrian.conley@gmail.com" => "Adrian Conley"))
     ->setFrom("info@sagewanted.com", "info")
     ->setSubject("There was a new sign-up!")
-    ->setBody("$send_name signed up on SageWanted.com. Their email address is $sender_email
+    ->setBody("$sender_name signed up on SageWanted.com. Their email address is $sender_email
         and wanted to register as $sender_sageRegistration with the subjects $sender_subjects. They also would like to tell 
         $sender_message");
     
