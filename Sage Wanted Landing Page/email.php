@@ -9,24 +9,24 @@ $sender_subjects = filter_var($_POST["subjects"], FILTER_SANITIZE_STRING); //cap
 $sender_message = filter_var($_POST["otherMessage"], FILTER_SANTITIZE_STRING);
 
 //Create the SMTP configuration
+$to = array('adrian.conley@gmail.com' => 'Adrian Conley'); //recepient
+$from = array('noreply@sagewanted.com' => 'SageWanted'); //from email using site domain.
+$subject = 'New Sign Up!'; //email subject line
+$text = '$sender_name signed up on SageWanted.com. Their email address is $sender_email
+        and wanted to register as $sender_sageRegistration with the subjects $sender_subjects. They also would like to tell 
+        $sender_message';
+
 $transport = Swift_SmtpTransport::newInstance("smtp.sagewanted.net");
 $transport->setUsername("sagewantedcom");
-$transport->setPassword("Jack123++");
-
-$recepient_email    = "adrian.conley@gmail.com"; //recepient
-$from_email         = "noreply@sagewanted.com"; //from email using site domain.
-$subject            = "New Sign Up!"; //email subject line
+$transport->setPassword("fakepassword");
 
 //create mailer
-$mailer = Swift_Mailer::newInstance($transport);
-$message = Swift_message::newInstance('New Signup')
-    ->setTo(array(
-    "adrian.conley@gmail.com" => "Adrian Conley"))
-    ->setFrom("info@sagewanted.com", "info")
-    ->setSubject("There was a new sign-up!")
-    ->setBody("$sender_name signed up on SageWanted.com. Their email address is $sender_email
-        and wanted to register as $sender_sageRegistration with the subjects $sender_subjects. They also would like to tell 
-        $sender_message");
+$swift = Swift_Mailer::newInstance($transport);
+
+$message = new Swift_Message($subject);
+$message->setFrom($from);
+$message->setBody($text);
+
     
 //send message
 $result = $mailer->send($message);
@@ -37,3 +37,4 @@ if ($result)
 }
 
 ?>
+
