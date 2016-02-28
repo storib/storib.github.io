@@ -40,32 +40,42 @@
         <div class="row">
           <div class="one-half column">
             <label for="sageRegistration">I want to:</label>
-            <select class="u-full-width" id="sageRegistration">
+            <select class="u-full-width" name="sageRegistration" id="sageRegistration">
               <option value=" " selected disabled> Select One </option>
-              <option value="Option 1">share my skills</option>
-              <option value="Option 2">learn something new</option>
-              <option value="Option 3">do both</option>
+              <option value="Teach Something">share my skills</option>
+              <option value="Learn Something">learn something new</option>
+              <option value="Interested in Both">do both</option>
             </select>
           </div>
           <div class="one-half column">
             <label for="subjects">I'm interested in the following subject</label>
-            <select class="u-full-width" id="subjects">
+            <select class="u-full-width" id="subjects" name="subjects">
               <option value=" " selected disabled> Select Your Interest </option>
-              <option value="Option 1">Coding (C++, Python, Ruby, HTML/CSS, Other)</option>
-              <option value="Option 2">Business/Finance</option>
-              <option value="Option 3">Language (French, Spanish, Mandarin, English, Other)</option>
-              <option value="Option 4">Office Skills (Excel, Sheets, Docs, Word, Other)</option>
-              <option value="Option 3">Other (Specify Below)</option>
+              <option value="Coding">Coding (C++, Python, Ruby, HTML/CSS, Other)</option>
+              <option value="Business/Finance">Business/Finance</option>
+              <option value="Languages">Language (French, Spanish, Mandarin, English, Other)</option>
+              <option value="Office Skills">Office Skills (Excel, Sheets, Docs, Word, Other)</option>
+              <option value="Other">Other (Specify Below)</option>
             </select>
           </div>
         </div>
         <label for="otherMessage">What are the specific subjects you'd like to teach/learn?</label>
-        <textarea class="u-full-width" placeholder="Specify Your Skill Here" name="otherMessage"></textarea>
+        <textarea id="noborder" class="u-full-width" placeholder="Specify Your Skill Here" name="s_message"></textarea>
         <input class="button-primary" type="submit" value="Submit">
       </form>
     </div>
   </div>
   <footer>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74432427-1', 'auto');
+  ga('send', 'pageview');
+
+  </script>
     <p>&copy; 2016 SageWanted.com</p>
   </footer>
 </body>

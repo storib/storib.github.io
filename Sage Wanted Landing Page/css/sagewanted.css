@@ -107,6 +107,14 @@ h2 {
 	text-align: center;
 }
 
+#sageRegistration, #subjects {
+	color: #a6a6a6;
+}
+
+#noborder {
+	border-style: none;
+}
+
 #howitworks {
 	text-align: center;
 	width: 100%;
