@@ -29,7 +29,7 @@
       <form method="post" name="signupsheet" action="email.php" enctype="multipart/form-data">
         <div class="row">
           <div class="one-half column">
-            <label for="nameInput">First and Last Name</label>
+            <label for="names">First and Last Name</label>
             <input class="u-full-width" type="text" placeholder="First Last Name" name="nameInput">
           </div>
           <div class="one-half column">
@@ -40,7 +40,7 @@
         <div class="row">
           <div class="one-half column">
             <label for="sageRegistration">I want to:</label>
-            <select class="u-full-width" name="sageRegistration" id="sageRegistration">
+            <select class="u-full-width" name="interest" class="dropdowns">
               <option value=" " selected disabled> Select One </option>
               <option value="Teach Something">share my skills</option>
               <option value="Learn Something">learn something new</option>
@@ -49,7 +49,7 @@
           </div>
           <div class="one-half column">
             <label for="subjects">I'm interested in the following subject</label>
-            <select class="u-full-width" id="subjects" name="subjects">
+            <select class="u-full-width" class="dropdowns" name="subjects">
               <option value=" " selected disabled> Select Your Interest </option>
               <option value="Coding">Coding (C++, Python, Ruby, HTML/CSS, Other)</option>
               <option value="Business/Finance">Business/Finance</option>
@@ -59,23 +59,37 @@
             </select>
           </div>
         </div>
-        <label for="otherMessage">What are the specific subjects you'd like to teach/learn?</label>
-        <textarea id="noborder" class="u-full-width" placeholder="Specify Your Skill Here" name="s_message"></textarea>
-        <input class="button-primary" type="submit" value="Submit">
+        <div class="row">
+          <div class="twelve columns">
+            <label for="location">What part of the bay are you in?</label>
+            <select class="u-full-width" class="dropdowns" name="location">
+              <option value=" " selected disabled>Select your location</option>
+              <option value="south bay">South Bay</option>
+              <option value="east bay">East Bay</option>
+              <option value="San Francisco">San Francisco</option>
+              <option value="Peninsula">Peninsula</option>
+              <option value="Oakland">Oakland</option>
+              <option value="Berkeley">Berkeley</option>
+            </select>
+          </div>
+        </div>
+        <label for="message">What are the specific subjects you'd like to teach/learn?</label>
+        <textarea id="noborder" class="u-full-width" name="s_message"></textarea>
+        <input class="button-primary" type="submit" value="Submit" name="send">
       </form>
     </div>
   </div>
   <footer>
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-74432427-1', 'auto');
-  ga('send', 'pageview');
+      ga('create', 'UA-74432427-1', 'auto');
+      ga('send', 'pageview');
 
-  </script>
+    </script>
     <p>&copy; 2016 SageWanted.com</p>
   </footer>
 </body>
