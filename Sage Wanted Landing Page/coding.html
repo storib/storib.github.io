@@ -37,13 +37,16 @@
       <a href="/"><img src="images/logo.png" id="logopic"></a>
     </div>
   </nav>
-    <h1>How it Works</h1>
+    <h1>Code like a Pro with Help from a Local Coding Sage</h1>
     <div class="opposingcolor">
     <div class="container">
       <div class="row">
+        <h5>Learning to code by yourself is challenging. Self-study can only take you so far and classes can be expensive. Get in-person 1x1 help from a coding expert in your area. <br><br>Sign up below to get started!</h5>
+      </div>
+      <div class="row">
         <img src="images/howitworks.svg" id="howitworks">
       </div>
-      <form method="post" name="signupsheet" action="email.php" enctype="multipart/form-data">
+      <form method="post" name="signupsheet" action="chefemail.php" enctype="multipart/form-data">
         <div class="row">
           <div class="one-half column">
             <label for="names">First and Last Name</label>
@@ -56,29 +59,20 @@
         </div>
         <div class="row">
           <div class="one-half column">
-            <label for="interest">I want to:</label>
+            <label for="interest">I want to learn:</label>
             <select class="u-full-width" class="dropdowns" name="interest" required>
               <option value=" " selected disabled> Select One </option>
-              <option value="Teach Something">share my skills</option>
-              <option value="Learn Something">learn something new</option>
-              <option value="Interested in Both">do both</option>
+              <option value="Python">Python</option>
+              <option value="Ruby">Ruby</option>
+              <option value="Javascript">Javascript</option>
+              <option value="C++">C++</option>
+              <option value="Java">Java</option>
+              <option value="HTML">HTML/CSS</option>
+              <option value="PHP">PHP</option>
+              <option value="Other">Other - Please Specify Below</option>
             </select>
           </div>
           <div class="one-half column">
-            <label for="subjects">I'm interested in the following subject</label>
-            <select class="u-full-width" class="dropdowns" name="subjects" required>
-              <option value=" " selected disabled> Select Your Interest </option>
-              <option value="Coding">Coding (C++, Python, Ruby, HTML/CSS, Other)</option>
-              <option value="Cooking">Cooking Classes or 1x1 Instruction from a Chef</option>
-              <option value="Business/Finance">Business/Finance</option>
-              <option value="Languages">Language (French, Spanish, Mandarin, English, Other)</option>
-              <option value="Office Skills">Office Skills (Excel, Sheets, Docs, Word, Other)</option>
-              <option value="Other">Other (Specify Below)</option>
-            </select>
-          </div>
-        </div>
-        <div class="row">
-          <div class="twelve columns">
             <label for="location">What part of the bay are you in?</label>
             <select class="u-full-width" class="dropdowns" name="location">
               <option value=" " selected disabled>Select your location</option>
@@ -91,7 +85,10 @@
             </select>
           </div>
         </div>
-        <label for="message">What are the specific subjects you'd like to teach/learn?</label>
+        <div class="row">
+          
+        </div>
+        <label for="message">What else would you like us to know?</label>
         <textarea id="noborder" class="u-full-width" name="s_message"></textarea>
         <input class="button-primary" type="submit" value="Submit" name="send">
       </form>

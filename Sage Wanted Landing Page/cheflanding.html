@@ -37,13 +37,29 @@
       <a href="/"><img src="images/logo.png" id="logopic"></a>
     </div>
   </nav>
-    <h1>How it Works</h1>
+    <h1>Get in Home Help from a Cooking Expert</h1>
     <div class="opposingcolor">
     <div class="container">
       <div class="row">
-        <img src="images/howitworks.svg" id="howitworks">
+        <h5>Learn  tasty dishes at home from help from a local chef. Create the perfect dish for a date, queue nostalgia by getting help recreating a childhood dish or just brush up on your technique.</h5>
       </div>
-      <form method="post" name="signupsheet" action="email.php" enctype="multipart/form-data">
+      <div class="row">
+        <div class="one-half column">
+          <img src="images/signup-01.svg" id="howitworksbutton">
+        </div>
+        <div class="one-half column">
+          <img src="images/pair-01.svg" id="howitworksbutton">
+        </div>
+      </div>
+      <div class="row">
+        <div class="one-half column">
+          <img src="images/pay-01.svg" id="howitworksbutton">
+        </div>
+        <div class="one-half column">
+          <img src="images/learn-01.svg" id="howitworksbutton">
+        </div>
+      </div>
+      <form method="post" name="signupsheet" action="chefemail.php" enctype="multipart/form-data">
         <div class="row">
           <div class="one-half column">
             <label for="names">First and Last Name</label>
@@ -56,29 +72,20 @@
         </div>
         <div class="row">
           <div class="one-half column">
-            <label for="interest">I want to:</label>
+            <label for="interest">I want to learn:</label>
             <select class="u-full-width" class="dropdowns" name="interest" required>
               <option value=" " selected disabled> Select One </option>
-              <option value="Teach Something">share my skills</option>
-              <option value="Learn Something">learn something new</option>
-              <option value="Interested in Both">do both</option>
+              <option value="French">French</option>
+              <option value="Indian">Indian</option>
+              <option value="Spanish">Spanish</option>
+              <option value="BBQ">BBQ</option>
+              <option value="Mexican">Mexican</option>
+              <option value="Chinese">Chinese</option>
+              <option value="Technique">Technique</option>
+              <option value="Other">Other - Please Specify Below</option>
             </select>
           </div>
           <div class="one-half column">
-            <label for="subjects">I'm interested in the following subject</label>
-            <select class="u-full-width" class="dropdowns" name="subjects" required>
-              <option value=" " selected disabled> Select Your Interest </option>
-              <option value="Coding">Coding (C++, Python, Ruby, HTML/CSS, Other)</option>
-              <option value="Cooking">Cooking Classes or 1x1 Instruction from a Chef</option>
-              <option value="Business/Finance">Business/Finance</option>
-              <option value="Languages">Language (French, Spanish, Mandarin, English, Other)</option>
-              <option value="Office Skills">Office Skills (Excel, Sheets, Docs, Word, Other)</option>
-              <option value="Other">Other (Specify Below)</option>
-            </select>
-          </div>
-        </div>
-        <div class="row">
-          <div class="twelve columns">
             <label for="location">What part of the bay are you in?</label>
             <select class="u-full-width" class="dropdowns" name="location">
               <option value=" " selected disabled>Select your location</option>
@@ -91,7 +98,10 @@
             </select>
           </div>
         </div>
-        <label for="message">What are the specific subjects you'd like to teach/learn?</label>
+        <div class="row">
+          
+        </div>
+        <label for="message">What else would you like us to know?</label>
         <textarea id="noborder" class="u-full-width" name="s_message"></textarea>
         <input class="button-primary" type="submit" value="Submit" name="send">
       </form>

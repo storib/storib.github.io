@@ -5,7 +5,6 @@ require_once 'lib/swift_required.php';
 $sender_name = filter_var($_POST["nameInput"], FILTER_SANITIZE_STRING); //capture sender name
 $sender_email = filter_var($_POST["emailInput"], FILTER_SANITIZE_STRING); //capture sender email
 $sender_interest = filter_var($_POST["interest"], FILTER_SANITIZE_STRING); //capture interest 
-$sender_subjects = filter_var($_POST["subjects"], FILTER_SANITIZE_STRING); //capture message
 $sender_location = filter_var($_POST["location"], FILTER_SANITIZE_STRING);
 $sender_message = filter_var($_POST["s_message"], FILTER_SANITIZE_STRING);
 
@@ -20,9 +19,9 @@ $mailer = Swift_Mailer::newInstance($transport);
 $message = Swift_Message::newInstance('New Sign Up!')
 	->setFrom(array('noreply@sagewanted.com' => 'SageWanted'))
 	->setTo(array('adrian@sagewanted.com' => 'Adrian Conley'))
-	->setBody($sender_name ." " . "signed up on SageWanted.com. Their email address is" ." ". $sender_email ." ".
-        "and wanted to register to ". " " . $sender_interest ." with the subjects ". $sender_subjects . 
-        "They also would like to tell ". $sender_message . "and are located in" . $sender_location);
+	->setBody("Name: " ." " . $sender_name . " " . "Email: " . " " . $sender_email . " "
+		."Interested in: " . " " . $sender_interest . "Location: " . " " . $sender_location . " " .  "Other Message: " 
+		. " " . $sender_message);
 
 //send message
 $result = $mailer->send($message);

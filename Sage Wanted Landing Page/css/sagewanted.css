@@ -4,6 +4,13 @@ h1,h2,h3 {
 	font-weight: 400;
 }
 
+@media (max-width: 580px) {
+  h1 {
+  	font-size: 2.5rem;
+  	text-align: center;
+  }
+}
+
 h2 {
 	padding: .75em;
 	border-top: solid 1px gray;
@@ -72,6 +79,22 @@ h2 {
 	color: #FFFFFF;
 }
 
+@media (max-width: 580px) {
+  #hero h3 {
+  	font-size: 3.5rem;
+  	padding-top: 2em;
+  }
+
+  .container h3 {
+  	font-size: 2.75rem;
+  }
+
+  #solution p {
+  	font-size: 2rem;
+  }
+}
+
+
 .one-half.column {
 	text-align: center;
 }
@@ -133,11 +156,30 @@ footer {
 	background-color: #a3ccb2;
 }
 
+#howitworksbutton {
+	width: 50%;
+	text-align: center;
+}
+
+input:valid {
+	border: 1px solid #a3ccb2;
+}
+
+select:valid {
+	border: 1px solid #a3ccb2;
+}
+
+h5 {
+	text-align: center;
+	font-size: 2.2rem;
+	font-weight: 200;
+	color: #FFFFFF;
+}
+
 label {
 	color: #FFFFFF;
 	font-size: 1.5rem;
 }
-
 
 @media (max-width: 580px) {
   img {
@@ -147,5 +189,36 @@ label {
   #logopic {
   	width: 30%;
 	}
+  h5 {
+  	font-size: 1.8rem;
+  }
+
 }
 
+/* This is our style for the invalid fields */
+input.invalid{
+  border-color: #900;
+  background-color: #FDD;
+}
+
+input:focus.invalid {
+  outline: none;
+}
+
+/* This is the style of our error messages */
+.error {
+  width  : 100%;
+  padding: 0;
+ 
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+ 
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+}
